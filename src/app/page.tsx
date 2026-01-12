@@ -1,12 +1,7 @@
 import MaxWithWrapper from "@/components/MaxWithWrapper";
 import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
-import {
-  ArrowDownToLine,
-  CheckCircle,
-  Leaf,
-  MessageCircle,
-} from "lucide-react"; // or your icon library
+import { ArrowDownToLine, CheckCircle, MessageCircle } from "lucide-react"; // or your icon library
 
 export default function Home() {
   const perks = [
