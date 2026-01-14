@@ -2,6 +2,7 @@
 import { ShoppingCartIcon } from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
 import { Separator } from "./ui/separator";
+import { formatPrice } from "@/lib/utils";
 
 const Cart = () => {
   const itemCount = 1;
@@ -35,7 +36,7 @@ const Cart = () => {
               <div className="space-y-1.5 pr-6">
                 <div className="flex">
                   <span className="flex-1">Transaction Fee</span>
-                  <span className="">1</span>
+                  <span className="">{formatPrice(1)}</span>
                 </div>
               </div>
             </div>
