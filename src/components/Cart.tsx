@@ -1,8 +1,16 @@
 "use client";
 import { ShoppingCartIcon } from "lucide-react";
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetFooter,
+  SheetHeader,
+  SheetTrigger,
+} from "./ui/sheet";
 import { Separator } from "./ui/separator";
 import { formatPrice } from "@/lib/utils";
+import Link from "next/link";
+import { buttonVariants } from "./ui/button";
 
 const Cart = () => {
   const itemCount = 1;
@@ -39,7 +47,25 @@ const Cart = () => {
                   <span className="flex-1">Transaction Fee</span>
                   <span className="">{formatPrice(fee)}</span>
                 </div>
+                <div className="flex">
+                  <span className="flex-1">Total</span>
+                  <span className="">{formatPrice(fee)}</span>
+                </div>
               </div>
+
+              <SheetFooter>
+                <SheetTrigger asChild>
+                  <Link
+                    href="/cart"
+                    className={buttonVariants({
+                      className:
+                        "w-full hover:bg-blue-600 focus:ring-2 focus:ring-blue-400 transition-colors",
+                    })}
+                  >
+                    Proceed to Checkout
+                  </Link>
+                </SheetTrigger>
+              </SheetFooter>
             </div>
           </>
         ) : (
