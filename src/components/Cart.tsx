@@ -6,6 +6,7 @@ import { formatPrice } from "@/lib/utils";
 
 const Cart = () => {
   const itemCount = 1;
+  const fee = 1;
   return (
     <Sheet>
       <SheetTrigger className="group -m-2 flex items-center p-2">
@@ -36,7 +37,7 @@ const Cart = () => {
               <div className="space-y-1.5 pr-6">
                 <div className="flex">
                   <span className="flex-1">Transaction Fee</span>
-                  <span className="">{formatPrice(1)}</span>
+                  <span className="">{formatPrice(fee)}</span>
                 </div>
               </div>
             </div>
